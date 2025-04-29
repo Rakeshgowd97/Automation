@@ -103,4 +103,8 @@ Run tests with a specific browser:
 
 npx playwright test --project=chromium
 
+Running the APIvalidatiosn spec file 
+
+-->npx playwright test Apivalidations.spec.js
+
 
