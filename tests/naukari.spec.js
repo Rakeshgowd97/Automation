@@ -4,8 +4,8 @@ test('Early Access Automation', async ({ page }) => {
     test.slow();
     await page.goto('https://www.naukri.com/');
     await page.locator('//a[text()="Login"]').click();
-    await page.getByPlaceholder('Enter your active Email ID / Username').fill('rakeshgowda3937@gmail.com');
-    await page.getByPlaceholder('Enter your password').fill('Rakesh@0412');
+    await page.getByPlaceholder('Enter your active Email ID / Username').fill('\');
+    await page.getByPlaceholder('Enter your password').fill('Ra2');
     await page.getByRole('button', { name: 'Login', exact: true }).click();
     await page.waitForTimeout(3000); // Wait for login to complete
     await page.getByRole('button', { name: 'Share interest' }).first().click();
