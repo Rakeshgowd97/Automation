@@ -1,0 +1,110 @@
+Clone the Repository
+
+git clone https://github.com/Rakeshgowd97/Automation.git
+cd Automation
+
+
+
+Install DependenciesInstall the required Node.js packages and Playwright browsers:
+
+npm install
+npx playwright install
+
+
+
+Verify ConfigurationEnsure the playwright.config.ts file is present and configured for your needs (e.g., browsers, timeouts, or reporters). Modify it if necessary.
+
+Running Tests
+
+To run all Playwright tests:
+
+npx playwright test
+
+Running Specific Tests
+
+
+Clone the Repository
+
+git clone https://github.com/Rakeshgowd97/Automation.git
+cd Automation
+
+
+
+Install DependenciesInstall the required Node.js packages and Playwright browsers:
+
+npm install
+npx playwright install
+
+
+
+Verify ConfigurationEnsure the playwright.config.ts file is present and configured for your needs (e.g., browsers, timeouts, or reporters). Modify it if necessary.
+
+Running Tests
+
+To run all Playwright tests:
+
+npx playwright test
+
+Running Specific Tests
+
+
+
+
+
+Run tests in a specific file:
+
+npx playwright test tests/example.spec.ts
+
+
+
+Run tests with a specific browser:
+
+npx playwright test --project=chromium
+
+
+Run tests in a specific file:
+
+npx playwright test tests/example.spec.ts
+Clone the Repository
+
+git clone https://github.com/Rakeshgowd97/Automation.git
+cd Automation
+
+
+
+Install DependenciesInstall the required Node.js packages and Playwright browsers:
+
+npm install
+npx playwright install
+
+
+
+Verify ConfigurationEnsure the playwright.config.ts file is present and configured for your needs (e.g., browsers, timeouts, or reporters). Modify it if necessary.
+
+Running Tests
+
+To run all Playwright tests:
+
+npx playwright test
+
+Running Specific Tests
+
+
+
+
+
+Run tests in a specific file:
+
+npx playwright test tests/example.spec.ts
+
+
+
+Run tests with a specific browser:
+
+npx playwright test --project=chromium
+
+Running the APIvalidatiosn spec file 
+
+-->npx playwright test Apivalidations.spec.js
+
+
