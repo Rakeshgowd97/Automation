@@ -1,11 +1,28 @@
 name: Playwright Insurance Test
 
 on:
-  workflow_dispatch:   # 👈 Adds the manual "Run workflow" button
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  workflow_dispatch:   # 👈 Adds manual trigger with fields
+    inputs:
+      mobile:
+        description: "Enter Mobile Number"
+        required: true
+        default: "9000000011"
+      username:
+        description: "Enter Username"
+        required: true
+        default: "rakesh"
+      dob:
+        description: "Enter Date of Birth (yyyy-mm-dd)"
+        required: true
+        default: "2000-12-12"
+      city:
+        description: "Enter City"
+        required: true
+        default: "Bengaluru"
+      email:
+        description: "Enter Email ID"
+        required: true
+        default: "rakesh0123@gmail.com"
 
 jobs:
   test:
@@ -25,7 +42,13 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Insurance Test
-        run: npx playwright test Insurance.spec.js
+        run: |
+          MOBILE=${{ github.event.inputs.mobile }} \
+          USERNAME=${{ github.event.inputs.username }} \
+          DOB=${{ github.event.inputs.dob }} \
+          CITY=${{ github.event.inputs.city }} \
+          EMAIL=${{ github.event.inputs.email }} \
+          npx playwright test Insurance.spec.js
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
